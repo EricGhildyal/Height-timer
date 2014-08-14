@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Height Timer</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+	<link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Height Timer</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="index">Home</a></li>
+                <li><a href="about">About</a></li>
+              </ul>
+            </div>
+          </div>
+         <div class="inner cover">
+			<p class="lead">Press Start when your object begins falling, press stop when it lands to calculate the approximate height.</p>
+        </div>
+		<div>
+			<p class="time-disp" id="time"> </p>
+			<br>
+			<br>
+			<p class="time-disp" id="height-ft-disp"> </p>
+			<br>
+			<br>
+			<p class="time-disp" id="height-mt-disp"> </p>
+			<br>
+			<br>
+			<input type="button" value="Start" class="btn btn-lg btn-default" onclick="changebtn()" id ="startstop" />
+		 </div>
+		 <br>
+		 <br>
+          <div class="mastfoot">
+            <div class="inner">
+              <p> Created by <a href="mailto:formalisiskey@gmail.com"> Eric Ghildyal </a> | Idea based off Mark Rober's Youtube video.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+	<script src="script.js"></script>
+  </body>
+</html>
