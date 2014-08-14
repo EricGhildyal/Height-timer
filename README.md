@@ -7,6 +7,6 @@ Determines the approximate height from the time it takes an object to fall.
 
 1. Open in webpage
 
-2. Press start to being the timer. 
+2. Press start to begin the timer. 
 
 3. Press stop when the object has reached the ground.
