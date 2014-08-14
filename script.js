@@ -7,7 +7,7 @@ function dispHeight(){
 	var endTime = Date.now();
 	var height = 0;
 	var heightmt = 0;
-	totalTime = (endTime - startTime)/1000;
+	totalTime = (endTime - startTime)/1000; // divided by 1000 to get seconds, not milliseconds
 	document.getElementById('time').innerHTML = totalTime + ' Seconds';
 	height = 16*(totalTime*totalTime);
 	document.getElementById('height-ft-disp').innerHTML = height + ' Feet';
@@ -28,12 +28,14 @@ function changebtn(){
 }
 
 function reset(){
+	 //resets the counters
+	document.getElementById('time').innerHTML = '';
 	document.getElementById('height-ft-disp').innerHTML = '';
 	document.getElementById('height-mt-disp').innerHTML = '';
 }
 
 function start(){
-	reset(); //resets the counters (useful when Reset is pressed)
+	reset();
 	// start counting
 	running = true;
 	startTime = Date.now();
@@ -47,15 +49,12 @@ function stop(){
 
 function showTime(){
 	if(running){
-		window.requestAnimationFrame(function()
+		window.requestAnimationFrame(function() //loop
         {
             showTime();
         });
-		time = formatTime(Date.now() - startTime);
-		document.getElementById('time').innerHTML = 'Counting...';
+		time = Date.now() - startTime;
+		document.getElementById('time').innerHTML = 'Counting...'; 
+		//Doesn't display current time to save resources on mobile devices
 	}
-}
-
-function formatTime(elapsed) {
-	return elapsed + ' Milliseconds';
 }
